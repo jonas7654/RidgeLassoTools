@@ -20,8 +20,7 @@ devtools::install_local(path) # Install Developerversion (.tar.gz)
 ``` r
 devtools::build() # Build as .tar.gz
 devtools:build(binary = TRUE) # Build as binary. Depends on OS
-usethis::create_package() # Helper function which creates a package related folder
-# creates an .Rproj file to work in RStudio.
+usethis::create_package() # Helper function which creates a package related folder. Creates an .Rproj file to work in RStudio.
 usethis::use_r() # Create a new .R Script within the Package.
 devtools::load_all() # Reload all Scripts within the current session
 devtools::check() # Checks if the current implementation meets the standard requirements
