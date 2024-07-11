@@ -23,5 +23,7 @@ devtools:build(binary = TRUE) # Build as binary. Depends on OS
 usethis::create_package() # Helper function which creates a package related folder. Creates an .Rproj file to work in RStudio.
 usethis::use_r() # Create a new .R Script within the Package.
 devtools::load_all() # Reload all Scripts within the current session
-devtools::check() # Checks if the current implementation meets the standard requirements
+devtools::check() # Checks if the package meets the standard requirements
 ```
+4) Docs
+  
