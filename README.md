@@ -31,6 +31,4 @@ Should be done regularly in order to check if the package is still valid.
 ```r
 devtools::check() # Runs R CMD check 
 ```
-it runs the following tasks:
-## 1) Ensures that the documentation is up-to-date by running devtools::document().
 
