@@ -26,5 +26,11 @@ devtools::load_all() # Reload all Scripts within the current session
 devtools::check() # Checks if the package meets the standard requirements
 ```
 ![Alt Text](https://r-pkgs.org/diagrams/install-load.png)
-4) Docs
-  
+4) Checking
+Should be done regularly in order to check if the package is still valid.
+```r
+devtools::check() # Runs R CMD check 
+```
+it runs the following tasks:
+## 1) Ensures that the documentation is up-to-date by running devtools::document().
+
