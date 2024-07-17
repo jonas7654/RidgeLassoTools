@@ -25,6 +25,6 @@ usethis::use_r() # Create a new .R Script within the Package.
 devtools::load_all() # Reload all Scripts within the current session
 devtools::check() # Checks if the package meets the standard requirements
 ```
-[!Alt Text](https://r-pkgs.org/diagrams/install-load.png)
+![Alt Text](https://r-pkgs.org/diagrams/install-load.png)
 4) Docs
   
