@@ -23,20 +23,32 @@ ridge_estimator <- function(formula = NULL, lambda = 0, data = NULL) {
              )
   }
 
+  # Check validity of formula
+
+  terms_info <- terms(formula)
+  y_length <- attr(terms_info, "response")
+  formula_lhs <- formula[[2]]
+
+  stopifnot("Only one response variable is allowed" =
+           (y_length == 0 || length(all.vars(formula_lhs)) != 1)
+           )
 
   # Create a model tibble
   if (!is.null(data)) {
     X <- model_tibble(formula, data = data)
+    y <- formula[[2]]
+    data[y]
   }
   else {
+    # Get variables from the parent environment
     X <- model_tibble(formula, data = environment(formula))
+    y <- formula[[2]]
   }
-  print("ok")
 
   print(m)
   # Estimate coefficients
   beta <- solve(t(X) %*% X + lambda * diag(ncol(X)),
-          t(X) %*% y_reg) #without INTERCEPT
+          t(X) %*% y)
 
   return(beta)
 
