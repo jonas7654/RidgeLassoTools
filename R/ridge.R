@@ -47,10 +47,10 @@ ridge_estimator <- function(formula = NULL, lambda = 0, data = NULL) {
 
   print(m)
   # Estimate coefficients
-  beta <- solve(t(X) %*% X + lambda * diag(ncol(X)),
+  beta_ridge <- solve(t(X) %*% X + lambda * diag(ncol(X)),
           t(X) %*% y)
 
-  return(beta)
+  return(beta_ridge)
 
 }
 
